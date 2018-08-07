@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body
+        {
+            background-image: url("https://i.pinimg.com/originals/31/6c/99/316c994144415be5ebadf75be9eef5dc.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+        }
+    </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-left">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Gamescom_Logo.svg" id="logo" alt="I am missing" height="50" width="125">
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="@Url.Action("shophomepage", "shop")"><span class="glyphicon glyphicon-home"></span> HomePage</a></li>
+
+                    <li><a href="@Url.Action("Search", "shop")"><span class="glyphicon glyphicon-search"></span> Search</a></li>
+
+                    @if (Session["userName"] == null)
+                   {
+                        <li><a href="@Url.Action("Login", "User")"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+
+                    }
+                    @if (Session["userName"] != null)
+                    {
+                        <li><a href="@Url.Action("viewcart", "shop")"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+                        <li><a href="@Url.Action("logout", "user")"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+                        if (Session["permission"] != null && Session["permission"].ToString() == "1")
+                        {
+                            <li><a href="@Url.Action("AddGame", "Shop")"><span class="glyphicon glyphicon-plus-sign"></span> Add Game</a></li>
+                            <li><a href="@Url.Action("Orders", "Shop")"><span class="glyphicon glyphicon-folder-open"></span> View Orders</a></li>
+                            <li><a href="@Url.Action("Users", "User")"><span class="glyphicon glyphicon-user"></span> View Users</a></li>
+                        }
+                    }
+                    <li><a href="@Url.Action("Register", "User")"><span class="glyphicon glyphicon-registration-mark"></span> Register</a></li>
+                </ul>
+
+
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

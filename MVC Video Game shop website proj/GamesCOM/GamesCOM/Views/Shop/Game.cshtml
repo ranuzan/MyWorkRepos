@@ -1,0 +1,44 @@
+﻿@model GamesCOM.Models.Game
+
+@{
+    ViewBag.Title = "Game";
+}
+
+<h2>Buy Game</h2>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Games</title>
+</head>
+<body>
+    <h1>
+        Game Details:
+        <br />
+    </h1>
+        <div>
+            <img src="@Model.coverLink" height="300" width="200" />
+            <br />
+            Name : @Model.name
+            <br />
+            Console : @Model.console
+            <br />
+            Genre : @Model.genre
+            <br />
+            Price : @Model.price
+            <br />
+            Stock : @Model.stock
+            <br />
+            @if (Session["userName"] == null)
+            {
+                <h4> YOU MUST LOGIN TO BUY THIS GAME </h4>
+            }
+            @if (Session["userName"] != null)
+            {
+                @Html.ActionLink("add to cart", "addtocart", "shop", new { name = Model.name }, null)
+            }
+        </div>
+</body>
+</html>
+
+

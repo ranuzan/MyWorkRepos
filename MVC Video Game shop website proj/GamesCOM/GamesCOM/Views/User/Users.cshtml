@@ -1,0 +1,34 @@
+﻿@model GamesCOM.ModelView.UserViewModel
+@using GamesCOM.Models
+
+@{
+    ViewBag.Title = "Users";
+}
+
+@if (Session["permission"] != null && Session["permission"].ToString() == "1")
+{
+    <h2>Users</h2>
+
+    WebGrid obj = new WebGrid(Model.users);
+
+    @obj.GetHtml(
+        columns:
+        obj.Columns
+        (
+            obj.Column(columnName: "userName", header: "User Name"),
+            obj.Column(columnName: "firstName", header: "First Name"),
+            obj.Column(columnName: "lastName", header: "Last Name"),
+            obj.Column(columnName: "permission", header: "Permission"),
+            obj.Column(columnName: "deleted", header: "Disabled")
+        )
+    )
+}
+@if (Session["permission"] == null || Session["permission"].ToString() != "1")
+{
+    <html>
+    <body>
+        <br />
+        This page can be viwed only by administrators.
+    </body>
+</html>
+}

@@ -1,0 +1,34 @@
+﻿@model GamesCOM.ModelView.GameViewModel
+    @using GamesCOM.Models
+
+<table>
+    <tr>
+        @for (int i = 0, k = 0; i < Model.games.Count; i++, k++)
+        {
+            <td>
+                <br />
+                @Model.games[i].name - @Model.games[i].console
+                <br />
+                <img src="@Model.games[i].coverLink" height="300" width="200" />
+                <br />
+                @Model.games[i].price NIS
+                <br />
+                @Html.ActionLink("Order Now!", "game", "shop", new { name = Model.games[i].name }, null)
+            </td>
+            if (i == 4)
+            {
+                k = 0;
+                <tr></tr>
+                continue;
+            }
+            if (k == 5)
+            {
+                k = 0;
+                <tr></tr>
+            }
+        }
+    </tr>
+</table>
+
+
+

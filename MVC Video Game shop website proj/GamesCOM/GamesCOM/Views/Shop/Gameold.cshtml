@@ -1,0 +1,47 @@
+﻿@model GamesCOM.Models.Game
+
+@{
+    ViewBag.Title = "Game";
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Games</title>
+</head>
+<body>
+    <h1>
+        Game Details:
+        <br />
+    </h1>
+    <form action="viewCart" method="post" name="LoginForm">
+        <div>
+            Name : @Model.name
+            <br />
+            Console : @Model.console
+            <br />
+            Genre : @Model.genre
+            <br />
+            Price : @Model.price
+            <br />
+            Stock : @Model.stock
+            <br />
+            @if (Session["userName"] == null)
+            {
+                <h4> YOU MUST LOGIN TO BUY THIS GAME </h4>
+            }
+            @if (Session["userName"] != null)
+            {
+<input id="Button1" type="submit" value="Add to cart" />
+            }
+
+
+
+
+        </div>
+        </form>
+</body>
+</html>

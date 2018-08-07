@@ -1,0 +1,21 @@
+﻿@model GamesCOM.ModelView.GameViewModel
+@using GamesCOM.Models;
+
+@{
+    ViewBag.Title = "ShopHomePage";
+}
+
+@if (Session["userName"] != null)
+{
+    <h4> Hello @Session["userName"].ToString() </h4>
+}
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Shop</title>
+</head>
+<body>
+    @Html.Partial("DisplayGames", Model)
+</body>
+</html>

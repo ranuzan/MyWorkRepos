@@ -1,0 +1,34 @@
+﻿@model GamesCOM.Models.User
+
+@{
+    ViewBag.Title = "Register";
+}
+@if (Session["register"] != null)
+{
+    <h5>@Session["register"]</h5>
+}
+<html>
+<body>
+    <h2>Register</h2>
+    <br />
+    <form action="submitRegister" method="post">
+        <div class="form-group">
+            <label for="txtUserName">User Name </label>
+            <input type="text" class="form-control" id="txtUserName" name="userName" placeholder="Username" value="@Model.userName" />@Html.ValidationMessageFor(x => x.userName)
+        </div>
+        <div class="form-group">
+            <label for="textPassword">Password</label>
+            <input type="password" class="form-control" id="textPasswordRegister" name="password" placeholder="Password" value="@Model.password" />@Html.ValidationMessageFor(x => x.password)
+        </div>
+        <div class="form-group">
+            <label for="txtFirstNameRegister">First Name</label>
+            <input type="text" class="form-control" id="txtFirstNameRegister" name="firstName" placeholder="First Name" value="@Model.firstName" />@Html.ValidationMessageFor(x => x.firstName)
+        </div>
+        <div class="form-group">
+            <label for="txtLastNameRegister">Last Name</label>
+            <input type="text" class="form-control" id="txtLastNameRegister" name="lastName" placeholder="Last Name" value="@Model.lastName" />@Html.ValidationMessageFor(x => x.lastName)
+        </div>
+        <input id="SubmitRegister" class="btn btn-primary" type="submit" value="Register" />
+    </form>
+</body>
+</html>

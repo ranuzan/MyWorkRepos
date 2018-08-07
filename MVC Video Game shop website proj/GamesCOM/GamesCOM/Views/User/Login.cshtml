@@ -1,0 +1,28 @@
+﻿@model GamesCOM.Models.User
+
+@{
+    ViewBag.Title = "Login";
+}
+
+@if (Session["error"] != null)
+{
+    <h5>@Session["error"]</h5> 
+}
+
+<h2>Login</h2>
+
+<html>
+<body>
+    <form action="SubmitLogin" method="post" name="LoginForm">
+        <div class="form-group">
+            <input type="text" class="form-control" id="txtEmailLogin" name="userName" placeholder="Enter email" ng-model="userName" value="@Model.userName" required />
+        </div>
+        <div class="form-group">
+            <label for="txtPasswordLogin">Password</label>
+            <input type="password" class="form-control" id="txtPasswordLogin" name="password" placeholder="Enter password" value="@Model.password" />
+        </div>
+        <input id="SubmitLogin" class="btn btn-primary" type="submit" value="submit" />
+    </form>   
+</body>
+</html>
+

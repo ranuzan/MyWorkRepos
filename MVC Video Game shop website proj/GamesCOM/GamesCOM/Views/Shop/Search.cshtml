@@ -1,0 +1,39 @@
+﻿@model GamesCOM.ModelView.GameViewModel
+@using GamesCOM.Models;
+
+@{
+    ViewBag.Title = "Search";
+}
+
+<h2>Search</h2>
+
+@if (Session["userName"] != null)
+{
+    <h4> Hello @Session["userName"].ToString() </h4>
+}
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Shop</title>
+</head>
+<body>
+    <div>
+        <form action="Search" method="post">
+            Name to search <input id="Text1" name="txtName" type="text" />
+            <select id="Select1" name="ddConsole">
+                <option></option>
+                <option>PS4</option>
+                <option>XBOX ONE</option>
+                <option>PC</option>
+                <option>PS3</option>
+                <option>XBOX 360</option>
+            </select>
+            <input id="Submit1" type="submit" value="Search Game" />
+        </form>
+
+        @Html.Partial("DisplayGames", Model)
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,59 @@
+﻿@model GamesCOM.Models.Order
+
+@{
+    ViewBag.Title = "Orders";
+}
+
+@if (Session["permission"] != null && Session["permission"].ToString() == "1")
+{
+    <h2>Orders</h2>
+
+    <html>
+        <head>
+            <meta name="viewport" content="width=device-width" />
+            <title>Orders</title>
+        </head>
+        <script src="~/Scripts/jquery-1.10.2.js"></script>
+        <script src="~/Scripts/jquery.validate.js"></script>
+        <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+        <body>
+            <div>
+                <table id="ordersTable">
+                    <tr>
+                        <td>Order ID</td>
+                        <td>User Name</td>
+                        <td>Total Price</td>
+                    </tr>
+                </table>
+                <div id="status"></div>
+                <script language="javascript">
+                    $("#status").text("Loading...");
+                    $.get("GetOrdersByJson", null, BindData);
+                    function BindData(orders)
+                    {
+                        var tbl = $("#ordersTable");
+                        for (k = 0; k < orders.length; k++)
+                        {
+                            var newRow = "<tr>" +
+                                "<td>" + orders[k].id + "</td>" +
+                                "<td>" + orders[k].userName + "</td>" +
+                                "<td>" + orders[k].sum + " NIS</td>" +
+                                "</tr>";
+                            tbl.append(newRow);
+                        }
+                        $("#status").text("");
+                    }
+                </script>
+            </div>
+        </body>
+    </html>
+}
+@if (Session["permission"] == null || Session["permission"].ToString() != "1")
+{
+    <html>
+        <body>
+            <br />
+            This page can be viwed only by administrators.
+        </body>
+    </html>
+}

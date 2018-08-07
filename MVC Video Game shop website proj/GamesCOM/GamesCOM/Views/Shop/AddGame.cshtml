@@ -1,0 +1,55 @@
+﻿@model GamesCOM.ModelView.GameViewModel
+
+@{
+    ViewBag.Title = "AddGame";
+}
+
+@if (Session["permission"] != null && Session["permission"].ToString() == "1")
+{
+    <h2>Add Game</h2>
+
+    if (Session["userName"] != null)
+    {
+        <h4> Hello @Session["userName"].ToString() </h4>
+    }
+
+    <html>
+        <head>
+            <meta name="viewport" content="width=device-width" />
+            <title>Shop</title>
+        </head>
+        <script src="~/Scripts/jquery-1.10.2.js"></script>
+        <script src="~/Scripts/jquery.validate.js"></script>
+        <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+        <body>
+            <div class="form-group">
+                @using (Html.BeginForm("AddGame", "Shop", FormMethod.Post))
+                {
+                    <i>Name</i><br /> @Html.TextBoxFor(m => m.game.name) @Html.ValidationMessageFor(x => x.game.name)
+                    <br />
+                    <i>Console</i><br /> @Html.TextBoxFor(m => m.game.console) @Html.ValidationMessageFor(x => x.game.console)
+                    <br />
+                    <i>Genre</i><br /> @Html.TextBoxFor(m => m.game.genre) @Html.ValidationMessageFor(x => x.game.genre)
+                    <br />
+                    <i>Price</i><br /> @Html.TextBoxFor(m => m.game.price) @Html.ValidationMessageFor(x => x.game.price)
+                    <br />
+                    <i>Cover Link</i><br /> @Html.TextBoxFor(m => m.game.coverLink) @Html.ValidationMessageFor(x => x.game.coverLink)
+                    <br />
+                    <i>Stock</i><br /> @Html.TextBoxFor(m => m.game.stock) @Html.ValidationMessageFor(x => x.game.stock)
+                    <br />
+                    <br />
+                    <input id="btnAddGame" class="btn btn-primary" type="submit" value="Add Game" />
+                }
+            </div>
+        </body>
+    </html>
+}
+@if (Session["permission"] == null || Session["permission"].ToString() != "1")
+{
+    <html>
+        <body>
+            <br />
+            This page can be viwed only by administrators.
+        </body>
+    </html>
+}
