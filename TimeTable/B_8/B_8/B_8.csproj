@@ -1,0 +1,606 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FB88132D-81CD-4BC1-9AEC-DAE46D8AF371}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>B_8</RootNamespace>
+    <AssemblyName>B_8</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=13.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Services.Client" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About Us.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About Us.Designer.cs">
+      <DependentUpon>About Us.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCourse.Designer.cs">
+      <DependentUpon>AddCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddToSce.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddToSce.Designer.cs">
+      <DependentUpon>AddToSce.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add_Deatils.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_Deatils.Designer.cs">
+      <DependentUpon>Add_Deatils.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Description.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Description.Designer.cs">
+      <DependentUpon>Description.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFacebookLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFacebookLogin.Designer.cs">
+      <DependentUpon>FormFacebookLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meeting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meeting.Designer.cs">
+      <DependentUpon>Meeting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ClassDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassDepartment.Designer.cs">
+      <DependentUpon>ClassDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Constraints.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Constraints.Designer.cs">
+      <DependentUpon>Constraints.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contact_Us.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contact_Us.Designer.cs">
+      <DependentUpon>Contact_Us.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Course_Filtering_Suitability.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Course_Filtering_Suitability.Designer.cs">
+      <DependentUpon>Course_Filtering_Suitability.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase.cs" />
+    <Compile Include="DeleteCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteCourse.Designer.cs">
+      <DependentUpon>DeleteCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteWeeklySchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteWeeklySchedule.Designer.cs">
+      <DependentUpon>DeleteWeeklySchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnterKey.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnterKey.Designer.cs">
+      <DependentUpon>EnterKey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Exam_Deatails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Exam_Deatails.Designer.cs">
+      <DependentUpon>Exam_Deatails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FAQ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAQ.Designer.cs">
+      <DependentUpon>FAQ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotMyPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForgotMyPassword.Designer.cs">
+      <DependentUpon>ForgotMyPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalVariables.cs" />
+    <Compile Include="Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Info.Designer.cs">
+      <DependentUpon>Info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lecturercs.cs" />
+    <Compile Include="ListCourses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListCourses.Designer.cs">
+      <DependentUpon>ListCourses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Load_Class.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Load_Class.Designer.cs">
+      <DependentUpon>Load_Class.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="main.Designer.cs">
+      <DependentUpon>main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewUserRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewUserRegistration.Designer.cs">
+      <DependentUpon>NewUserRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Quat_date.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quat_date.Designer.cs">
+      <DependentUpon>Quat_date.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Schedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Schedule.Designer.cs">
+      <DependentUpon>Schedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowClassInSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowClassInSchedule.Designer.cs">
+      <DependentUpon>ShowClassInSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowCourses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowCourses.Designer.cs">
+      <DependentUpon>ShowCourses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Show_Exams.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Show_Exams.Designer.cs">
+      <DependentUpon>Show_Exams.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Semester_Schedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Semester_Schedule.Designer.cs">
+      <DependentUpon>Semester_Schedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewStudentsInCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewStudentsInCourse.Designer.cs">
+      <DependentUpon>ViewStudentsInCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WeeklySchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WeeklySchedule.Designer.cs">
+      <DependentUpon>WeeklySchedule.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="About Us.resx">
+      <DependentUpon>About Us.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddCourse.resx">
+      <DependentUpon>AddCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddToSce.resx">
+      <DependentUpon>AddToSce.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add_Deatils.resx">
+      <DependentUpon>Add_Deatils.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassDepartment.resx">
+      <DependentUpon>ClassDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Constraints.resx">
+      <DependentUpon>Constraints.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contact_Us.resx">
+      <DependentUpon>Contact_Us.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Course_Filtering_Suitability.resx">
+      <DependentUpon>Course_Filtering_Suitability.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteCourse.resx">
+      <DependentUpon>DeleteCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteWeeklySchedule.resx">
+      <DependentUpon>DeleteWeeklySchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Description.resx">
+      <DependentUpon>Description.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnterKey.resx">
+      <DependentUpon>EnterKey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Exam_Deatails.resx">
+      <DependentUpon>Exam_Deatails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FAQ.resx">
+      <DependentUpon>FAQ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForgotMyPassword.resx">
+      <DependentUpon>ForgotMyPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFacebookLogin.resx">
+      <DependentUpon>FormFacebookLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Info.resx">
+      <DependentUpon>Info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListCourses.resx">
+      <DependentUpon>ListCourses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Load_Class.resx">
+      <DependentUpon>Load_Class.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main.resx">
+      <DependentUpon>main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meeting.resx">
+      <DependentUpon>Meeting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewUserRegistration.resx">
+      <DependentUpon>NewUserRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quat_date.resx">
+      <DependentUpon>Quat_date.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Schedule.resx">
+      <DependentUpon>Schedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowClassInSchedule.resx">
+      <DependentUpon>ShowClassInSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowCourses.resx">
+      <DependentUpon>ShowCourses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Show_Exams.resx">
+      <DependentUpon>Show_Exams.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Semester_Schedule.resx">
+      <DependentUpon>Semester_Schedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewStudentsInCourse.resx">
+      <DependentUpon>ViewStudentsInCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WeeklySchedule.resx">
+      <DependentUpon>WeeklySchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\confirm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New_user.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exit-Clipart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddCourse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Return.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background faq.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question-faq-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\faq-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background faq1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lightbulb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background faq2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteCourse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout-button-md.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\send icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contact-us-log.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\semester courses-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Week schedule.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ListOfCourses.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exit.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reset-button.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Show students ic courses.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddCourseToSchedules.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteFile.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\300px-Ellipse_black.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1492959435_wednesday.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1492959447_friday.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue-3d-rectangle-hi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-1-icon--flatastic-1-iconset--custom-icon-design-0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Constraints icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Course view after filtering according to suitability.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_schedule1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Webp.net-resizeimage.png" />
+    <None Include="Resources\Sign-Refresh-icon.png" />
+    <None Include="Resources\send icon.png" />
+    <None Include="Resources\semester courses-icon.png" />
+    <None Include="Resources\Semester B icon.png" />
+    <None Include="Resources\Semester A icon.png" />
+    <None Include="Resources\Sign-Select-icon.png" />
+    <None Include="Resources\sunday1.jpg" />
+    <None Include="Resources\User-Group-icon.png" />
+    <None Include="Resources\university_icon.jpg" />
+    <None Include="Resources\הורד.png" />
+    <None Include="Resources\Student-3-icon.png" />
+    <None Include="Resources\user-add-icon.png" />
+    <None Include="Resources\username1 icon.png" />
+    <None Include="Resources\username icon.ico" />
+    <None Include="Resources\Week schedule1.jpg" />
+    <None Include="Resources\Search icon1.ico" />
+    <None Include="Resources\confirm icon.png" />
+    <None Include="Resources\confirm icon1.png" />
+    <None Include="Resources\backgound.jpg" />
+    <None Include="Resources\man-icon.png" />
+    <None Include="Resources\password icon.png" />
+    <None Include="Resources\004.png" />
+    <None Include="Resources\Quit_Button.png" />
+    <None Include="Resources\login-button-icon-png-15.png" />
+    <None Include="Resources\login_button.png" />
+    <None Include="Resources\Schoolboy_Studying-512.png" />
+    <None Include="Resources\images %283%29.jpg" />
+    <None Include="Resources\backgrounds-wallpaper-vector-tinted-background-wallpapers-array-wallwuzz-hd-wallpaper-7417_nagTWWa.jpg" />
+    <None Include="Resources\1493309824_add-notes.png" />
+    <None Include="Resources\1493309938_add-notes.png" />
+    <None Include="Resources\Custom-Icon-Design-Flatastic-3-Folder-delete.ico" />
+    <None Include="Resources\Folder-Delete-icon.png" />
+    <None Include="Resources\folder_delete.png" />
+    <None Include="Resources\Folder-Delete-icon %281%29.png" />
+    <None Include="Resources\Folder-Add-icon.png" />
+    <None Include="Resources\My-Documents-icon.png" />
+    <None Include="Resources\Mimetype-schedule-icon.png" />
+    <None Include="Resources\Search-icon.png" />
+    <None Include="Resources\Search-icon1.png" />
+    <None Include="Resources\Books-icon.png" />
+    <None Include="Resources\Add-Folder-icon.png" />
+    <None Include="Resources\1.jpg" />
+    <None Include="Resources\1493307599_exit2.png" />
+    <None Include="Resources\Rafiqul-Hassan-Blogger-Arrow-Back-4.ico" />
+    <None Include="Resources\loading background.png" />
+    <None Include="Resources\jwl-frame.png" />
+    <None Include="Resources\Books-icon1.png" />
+    <None Include="Resources\Calendar-Icon6.png" />
+    <None Include="Resources\Search-icon8.png" />
+    <None Include="Resources\Search-icon10.png" />
+    <None Include="Resources\folder-find-icon.png" />
+    <None Include="Resources\Search-Folder-icon5.png" />
+    <None Include="Resources\Search-Folder-icon26.png" />
+    <None Include="Resources\Search-icon_lior.png" />
+    <None Include="Resources\Notebook-Pen-icon.png" />
+    <None Include="Resources\Notebook-Pen-icon5.png" />
+    <None Include="Resources\Actions-go-next-icon.png" />
+    <None Include="Resources\Document-Write-icon.png" />
+    <None Include="Resources\Actions-go-previous-icon.png" />
+    <None Include="Resources\Button-Close-icon.png" />
+    <None Include="Resources\067861-3d-glossy-blue-orb-icon-alphanumeric-crossing.png" />
+    <None Include="Resources\Logout-icon8.png" />
+    <None Include="Resources\Button.png" />
+    <None Include="Resources\Button2.png" />
+    <None Include="Resources\arduino-icon-23.png" />
+    <None Include="Resources\arduino-icon-231.png" />
+    <None Include="Resources\home-icon.png" />
+    <None Include="Resources\Apps-Dialog-Logout-icon.png" />
+    <None Include="Resources\button background.jpg" />
+    <None Include="Resources\back1.jpg" />
+    <None Include="Resources\blue-surface-with-creases_1160-191.jpg" />
+    <None Include="Resources\images1.jpg" />
+    <None Include="Resources\Actions-system-log-out-icon.png" />
+    <None Include="Resources\glossy-3d-blue-delete-icon.png" />
+    <None Include="Resources\Actions-help-about-icon.png" />
+    <None Include="Resources\expences-button-png-hi.png" />
+    <None Include="Resources\rectangle icon.png" />
+    <None Include="Resources\calendar_icon8.png" />
+    <None Include="Resources\Mimetype-schedule-icon1.png" />
+    <None Include="Resources\calendar_icon81.png" />
+    <None Include="Resources\schedule-icon.png" />
+    <None Include="Resources\logout-icooon.png" />
+    <None Include="Resources\Image1.bmp" />
+    <None Include="Resources\Constraints icon1.png" />
+    <None Include="Resources\contact us icon.png" />
+    <None Include="Resources\Devices-network-wireless-connected-100-icon.png" />
+    <None Include="Resources\icon_schedule.png" />
+    <None Include="Resources\inside-logout-icon.png" />
+    <None Include="Resources\Online-writing-icon.png" />
+    <None Include="Resources\loading.gif" />
+    <None Include="Resources\email-info-icon.png" />
+    <None Include="Resources\Google-Classroom-Logo1-1.png" />
+    <None Include="Resources\images.png" />
+    <None Include="Resources\reload-icon.png" />
+    <None Include="Resources\meeting icon.png" />
+    <None Include="Resources\exit1.png" />
+    <None Include="Resources\class.png" />
+    <None Include="Resources\classssss.png" />
+    <None Include="Resources\light blue bacground.jpg" />
+    <None Include="Resources\add folder loading.gif" />
+    <None Include="Resources\add folder normal.gif" />
+    <None Include="Resources\delete course.png" />
+    <None Include="Resources\remove course.png" />
+    <None Include="Resources\add course.png" />
+    <None Include="Resources\Customer_Support-512.png" />
+    <None Include="Resources\flat_seo2-18-512.png" />
+    <Content Include="Resources\Search_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\A_8\A_8\A_8.csproj">
+      <Project>{fe5dda9d-9faf-442c-83e4-28fdeb040ea0}</Project>
+      <Name>A_8</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
