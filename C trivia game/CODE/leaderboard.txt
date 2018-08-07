@@ -1,0 +1,10 @@
+jonsnow  228
+lior  200
+oron  150
+ran  120
+jonsnow  116
+alex  100
+adam  90
+ben  80
+dima  70
+adam  65

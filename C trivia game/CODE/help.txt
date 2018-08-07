@@ -1,0 +1,22 @@
+player menu help:
+pressing 1 will start a new game
+pressing 2 will show you high scores
+pressing 9 will return you to login screen
+pressing x will exit the game without saving
+
+*in game help:
+The top left of the screen shows your current score and question time to answer
+The top right of the screen shows life savers remaining
+
+picking answer:
+each question has 4 possible answers (a-d)
+to choose an answer you need to type your answer(a-d) and press enter
+according to your answer a message will appear to inform you if your are right or wrong
+
+life savers:
+pressing 1 will use 50/50 on current question reduce your possibole answers from 4 to 2
+pressing 2 will replace current question with a diffrent one with same difficulty
+
+return to menu/exit:
+pressing 9 will return you to player menu without saving your score
+pressing 0 will exit the game
