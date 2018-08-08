@@ -6,13 +6,14 @@ I am a 3rd year software engineering student at SCE currently living in Be’er 
 I am a quick learner with excellent communication skills, hardworking, dedicated, team worker as well as solo worker.
 
 Professional Expertise:
-  Programming language: C, C++, C#, Python, Java
+
+    Programming language: C, C++, C#, Python, Java
   
-  Tools – Git, Visual Studio, Eclipse, GitHub
+    Tools – Git, Visual Studio, Eclipse, GitHub
   
-  Database – SQL
+    Database – SQL
   
-  Masters full Microsoft Office package (Word, Excel, Power Point, Outlook etc.) 
+    Masters full Microsoft Office package (Word, Excel, Power Point, Outlook etc.) 
   
 
 
