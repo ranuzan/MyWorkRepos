@@ -1,0 +1,28 @@
+who is the player?
+
+Jon Snow
+
+what is the setting?
+
+HardHome(an icy town filled with wildlings)
+
+what is the threat?
+
+The White Walkers
+
+what is the goal?
+
+convince wildings to join you and escape the town before the white walker kill you
+
+
+
+our Core Game Design
+
+player experince:
+feeling of discovery
+core mechanic:
+choose your own adventure
+theme:
+game of thrones
+core game loop:
+player needs to make choices on how to progress the story

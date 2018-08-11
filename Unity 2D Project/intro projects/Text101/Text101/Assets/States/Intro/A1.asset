@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b4acc24ce5a0c046817317a017cc6e0, type: 3}
+  m_Name: A1
+  m_EditorClassIdentifier: 
+  storyText: "Its a cold wintery night as a ship approches a dock filled with people
+    bla bla bla \nAfter you dock a man approches you he looks ready to attack \n\nWhat
+    do you do?\n\n1.Attack him before he attacks you\n\n2.Wait to see what he will
+    do\n\n3.Run back to your ship"
+  nextStates:
+  - {fileID: 11400000, guid: 39050a1ca19d9d641b8a12e246d4b559, type: 2}
+  - {fileID: 11400000, guid: d3b267a6edfff9049a53afcdf54b9751, type: 2}
+  - {fileID: 11400000, guid: 53ec01c1ff7779e4e95b9acea9e0713f, type: 2}

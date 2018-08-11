@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b4acc24ce5a0c046817317a017cc6e0, type: 3}
+  m_Name: Introduction
+  m_EditorClassIdentifier: 
+  storyText: 'Welcome to game of thrones battle for hardhome
+
+
+
+    to choose your story press 1-3 on your keybored
+
+
+    gl hf!
+
+
+    press 1 to continue!'
+  nextStates:
+  - {fileID: 11400000, guid: 7f0b09866b067d44587e174529fdf287, type: 2}

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b4acc24ce5a0c046817317a017cc6e0, type: 3}
+  m_Name: S2
+  m_EditorClassIdentifier: 
+  storyText: "The man comes to you and looks you straight in the eyes \r\nThen he
+    says we don\u2019t want no crows here\r\nWhat do you do?\r\n1.say you've come
+    to make peace\r\n2.attack him before he attack you"
+  nextStates:
+  - {fileID: 11400000, guid: 75f42746e78cbd54ca43d73698d29349, type: 2}
+  - {fileID: 11400000, guid: 39050a1ca19d9d641b8a12e246d4b559, type: 2}

@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b4acc24ce5a0c046817317a017cc6e0, type: 3}
+  m_Name: S5
+  m_EditorClassIdentifier: 
+  storyText: "As your about to give up your sword you a hear screeching sound in the
+    distance you see a huge snowfall coming torwards the village \r\nYou feel as if
+    death itself is coming\r\n1.continue"
+  nextStates:
+  - {fileID: 11400000, guid: 57b94dd65fb3af447b2a77d76118c05e, type: 2}
