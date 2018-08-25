@@ -1,0 +1,12 @@
+Name:Breakengers (break+avangers) 
+
+4:3 aspect ratio
+
+PlayerExperince : quick reactiong
+
+coreMachenic : breaking blockes
+
+Theme : Avangers
+
+CoreGameLoop
+smash all block without letting ball drop
