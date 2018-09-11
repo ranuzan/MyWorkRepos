@@ -1,0 +1,12 @@
+player experince:
+nervous and frantic from all the waves and bullets
+
+Core Mechanic
+shoot enemies and dodge bullet only move left and right no up or down
+
+theme 
+space
+
+core game loop
+signle endless level getting harder as far as the player goes
+when health reaches zero players losses
