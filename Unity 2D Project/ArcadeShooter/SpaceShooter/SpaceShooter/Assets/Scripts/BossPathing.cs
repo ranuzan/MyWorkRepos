@@ -31,7 +31,6 @@ public class BossPathing : MonoBehaviour
         if (waypointIndex <= waypoints.Count - 1)
         {
 
-            Debug.Log("waypoint index is :" + waypointIndex.ToString());
             var targetPosition = waypoints[waypointIndex].transform.position;
             var movementThisFrame = waveConfig.GetmoveSpeed() * Time.deltaTime;
 

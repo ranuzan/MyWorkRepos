@@ -39,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1378240669610578}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.4468685, y: -6.222098, z: 0}
+  m_LocalPosition: {x: -6.8109226, y: -0.8695011, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -77,8 +77,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.03, y: 0.84}
+  m_Offset: {x: -0.018069506, y: 0}
+  m_Size: {x: 2.2225747, y: 2.2225747}
   m_Direction: 0
 --- !u!114 &114153347625001462
 MonoBehaviour:
@@ -105,8 +105,8 @@ MonoBehaviour:
   health: 600
   points: 150
   shotCounter: 0
-  minTimeBetweenShots: 1
-  maxTimeBetweenShots: 2
+  minTimeBetweenShots: 2
+  maxTimeBetweenShots: 3
   projectile: {fileID: 1674061497298750, guid: cab3a6048310ca54eaf726716162647f, type: 2}
   projectileSpeed: 3
   deathVFX: {fileID: 1104348698494690, guid: 93dc8afc13006a14f84aac723a573dcd, type: 2}
@@ -115,6 +115,7 @@ MonoBehaviour:
   laserVolume: 0.5
   deathSound: {fileID: 8300000, guid: ca1183d4907748547b898b597ec2f7fe, type: 3}
   deathVolume: 1
+  Boss2ndProjectile: {fileID: 0}
 --- !u!114 &114657089634669778
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -103,10 +103,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  points: 75
   shotCounter: 0
   minTimeBetweenShots: 0.5
   maxTimeBetweenShots: 1
-  projectile: {fileID: 1674061497298750, guid: 0de2c9333e8f45446bb84e1006a3b8af, type: 2}
+  projectile: {fileID: 1674061497298750, guid: 4fb1e77acbf3ad640a47b6c2bda7e287, type: 2}
   projectileSpeed: 7
   deathVFX: {fileID: 1104348698494690, guid: 93dc8afc13006a14f84aac723a573dcd, type: 2}
   durationOfExplosion: 1
@@ -114,6 +115,7 @@ MonoBehaviour:
   laserVolume: 0.5
   deathSound: {fileID: 8300000, guid: ca1183d4907748547b898b597ec2f7fe, type: 3}
   deathVolume: 1
+  Boss2ndProjectile: {fileID: 0}
 --- !u!114 &114657089634669778
 MonoBehaviour:
   m_ObjectHideFlags: 1
