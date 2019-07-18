@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block content %}
+<main>
+  <table id="result-table">
+    <thead>
+          <tr>
+            <th>Line</th>
+            <th>Class</th>
+          </tr>
+    </thead>
+      <tbody>
+          {% for key, value in result.items() %}
+             <tr>
+               {% if value == 'offensive' %}
+                <td class="red"> {{ key }} </td>
+                <td class="red"> {{ value }} </td>
+                {% else %}
+                <td> {{ key }} </td>
+                <td> {{ value }} </td>
+                {% endif %}
+             </tr>
+          {% endfor %}
+      </tbody>
+  </table>
+</main>
+
+
+    <aside>
+      <strong>Help us improve our results</strong>
+      <hr>
+        <p>
+        Let us know about sentences that has wrong classification
+        by clicking on the report error button below.
+        thank you for your time and consideration.
+       </p>
+        <button id="convert-table">Report error</button>
+        <br>
+        <!--<textarea id="res"></textarea>-->
+    </aside>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block content %}
+<main>
+  <div class="alert info">
+    <span class="closebtn">&times;</span>
+    <strong>Hey! </strong>our site is optimized for mobile devices
+  </div>
+
+  <form action="{{ url_for('data') }}"  method="POST">
+
+    <textarea name="txtarea" placeholder="Write/Copy your text in here.."  rows="20" cols="50"></textarea>
+    <br>
+    <button type="submit" class="btn">SEND</button>
+
+    <label class="radiocon"><h5>Textual Analysis</h5>
+      <input type="radio" value="ta" checked="checked" name="radio">
+      <span class="checkmark"></span>
+    </label>
+
+    <label class="radiocon"><h5>Line-By-Line Analysis</h5>
+      <input type="radio" value="lbl" name="radio">
+      <span class="checkmark"></span>
+    </label>
+  </form>
+</main>
+
+<aside>
+  <p><strong>textual analysis :</strong><hr> recommended for long texts (document, email, article etc.) analyzes the text using an accurate syntactic dependency parser.</p>
+  <p><strong>Line-by-line analysis :</strong><hr> recommended for texts with short rows (chat, tweet etc.) analyzes the text per line.</p>
+</aside>
+{% endblock %}

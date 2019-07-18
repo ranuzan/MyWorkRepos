@@ -1,0 +1,21 @@
+
+{% extends "layout.html" %}
+{% block content %}
+<main>
+  <h1>How it works</h1>
+  <hr>
+  <h2>Naïve bayes classifiers</h2>
+  <p>Naïve bayes is a simple statistic yet highly scalable classifier that relies on bayes theorem its advantage is that it only requires a small amount of training data to estimate the parameters necessary for classification.</p>
+  <hr>
+  <h3>the process of building our classifier is as followes:</h3>
+  <p>•	a data set is fed to the classifier with examples of text and their class</p>
+  <p>•	the data set will be broken down and represented as vectors of feature values</p>
+  <p>• given a new example spacy (a syntactic dependency parser) will break the text to sentences</p>
+  <p>•the classifier will break these sentences into vectors and predict the class(offensive, nonoffensive) of each based on its features and values that match the data set that was fed onto it</p>
+  <p>to test our classifier we used a system called 10-fold cross validation we trained our algorithem with 90% of our data set and than tested its output on the remaining 10% the results can be seen in the attached excel file</p>
+  <a href="{{url_for('return_files')}}" target="blank"><b>Download - 10FldCrsVal.xlsx</b></a>
+</main>
+
+    <aside>
+    </aside>
+{% endblock %}

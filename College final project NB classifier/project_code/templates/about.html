@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+  <main>
+    <h1>About us</h1>
+    <hr>
+    <p><strong>Hi, our names are Lior and Ran We are 4th year software engineering students at Sami Shamoon college of engineering and the developers of this website and all its functionality with the mentoring of Marina Litvak Ph.D.</strong></p>
+
+    <h3>the problem :</h3>
+    <p>Toxic online content has become a major issue in today's world due to an exponential increase in the use of internet by people of different cultures and educational background. We all see it and hear about it via social networks texting applications etc.</p>
+    <p>We started working on this issue as part of our final project in the beginning of 2019, we wanted to give society an accurate free and easy to use offensive language classifier to allow long texts, chats, tweets and more to be further analysed and offensive/abusive activity to be easily detected.</p>
+    
+    <h3>Our solution:</h3>
+    <p>To achieve all the above we have built this website that interfaces with our learning algorithm  so that you can analyze your texts with ease.</p>
+    <p>If you want to know more about how it works  <a href="{{url_for('how')}}"><strong>Click here</strong></a></p>
+    <p>If you want to contact us <a href="{{url_for('contact')}}"><strong>Click here</strong></a></p>
+  </main>
+
+  <aside></aside>
+{% endblock %}

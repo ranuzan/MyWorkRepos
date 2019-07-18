@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+<title>Offensive text classification</title>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/static/style.css">
+  <link rel="stylesheet" type="text/css" href="/static/contact_style.css">
+  <link rel="stylesheet" type="text/css" href="/static/rest.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Roboto:500,900,100,300,700,400'>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+</head>
+<body class="container">
+
+<header>
+  <a href="{{url_for('main')}}">
+    <h1 style="font-family: 'Roboto', sans-serif; color:white;">  Offensive Text Classification </h1>
+  </a>
+  <div id="container">
+  <div id="center">
+  <h4 class="typewriter">Machine_learning {}.</h4>
+  </div>
+  </div>
+</header>
+
+<nav>
+      <ul>
+        <a href="{{url_for('main')}}"><li><i class="material-icons">home</i><br>Home</li></a>
+        <a href="{{url_for('upload')}}"><li><i class="material-icons">cloud_upload</i><br>Upload a file</li></a>
+        <a href="{{url_for('about')}}"><li><i class="material-icons">person</i><br>About us</li></a>
+        <a href="{{url_for('how')}}"><li><i class="material-icons">info_outline</i><br>How it works</li></a>
+        <a href="{{url_for('contact')}}"><li><i class="material-icons">message</i><br>Contact</li></a>
+      </ul>
+</nav>
+
+  {% block content %}{% endblock %}
+
+
+<footer>
+  <div>
+    <div class="tooltip">
+      <span class="tooltiptext">SCE.Bsc</span>
+      <a href="https://www.facebook.com/SCE.Bsc/" class="fa fa-facebook bounce"></a>
+    </div>
+
+    <div class="tooltip">
+      <span class="tooltiptext">sce.academy</span>
+      <a href="https://www.instagram.com/sce.academy/" class="fa fa-instagram bounce"></a>
+    </div>
+
+    <div class="tooltip">
+      <span class="tooltiptext">scebsc</span>
+      <a href="https://www.youtube.com/user/scebsc" class="fa fa-youtube bounce"></a>
+    </div>
+  </div>
+ <p>Text classification by [ Lior Shusterman & Ran Uzan ]</p>
+</footer>
+
+  <script type="text/javascript" src="{{ url_for('static', filename='js/report.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/message.js') }}"></script>
+</body>
+</html>

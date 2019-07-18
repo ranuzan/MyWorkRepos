@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block content %}
+<main>
+  <form action="{{ url_for('upload_file') }}" enctype="multipart/form-data" method=post >
+    <br>
+    <br>
+    <input class="up" type = "file" name = "file" />
+    <br>
+    <br>
+    <button type="submit" class="btn">SEND</button>
+  </form>
+</main>
+<aside>
+  <strong>How to use:</strong>
+  <p>We currently support just 'example.txt' file layout.</p>
+  <p>
+    upload uses textual analysis so be sure to check if your file
+    text uses english grammer rules.
+  </p>
+</aside>
+{% endblock %}

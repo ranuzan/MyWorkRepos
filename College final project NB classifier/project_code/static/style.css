@@ -1,0 +1,319 @@
+html{
+  font-family: "Raleway",sans-serif;
+  background-color: #dddddd;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+@media (min-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: auto 1fr auto;
+
+  }
+}
+
+header {
+  background-image: url("header-pattern.png");
+  grid-column: span 3;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.5em;
+  color: WHITE;
+  cursor:default;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+main {
+  padding: 20px;
+}
+
+nav {
+  background-color: #f1f1f1;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+nav ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: BLACK;
+}
+
+nav li{
+  text-align: center;
+  padding: 8px;
+  background-color: #f1f1f1;
+  color:#000;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+nav li:hover{
+  background-color: #0099cc;
+  font-weight: bold;
+  color: white;
+}
+aside {
+  padding: 10px;
+  background-color: #f1f1f1;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+footer {
+  grid-column: span 3;
+  padding: 5px;
+  text-align: center;
+  font-size: 15px;
+  background-color: BLACK;
+  color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+h1 {
+  font-weight: bold;
+}
+
+
+textarea, label {
+    display: block;
+}
+
+textarea{
+  resize: none;
+  margin: auto;
+  width: 60%;
+  border: 3px solid #3c4454;
+}
+
+a{
+  text-decoration: none;
+}
+
+.btn{
+  height: 30px;
+  width: 240px;
+  position:relative;
+  left: 50%;
+  margin-left: -120px;
+  top: 50%;
+  margin-top: 5px;
+  background-color: BLACK;
+  color: white;
+  font-size: 25.6px;
+  padding: 0px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.btn:hover{
+  opacity: 1;
+  font-weight: bold;
+  background-color: #0099cc;
+  color: white;
+}
+
+table {
+  font-family: Arial;
+  overflow: hidden;
+  border-radius: 25px;
+  border-collapse: collapse;
+  background-color:white;
+  width: 100%;
+}
+
+td, th {
+  position: relative;
+  text-align: left;
+  padding: 1em;
+}
+ th{
+   background-color: #3883ff
+ }
+tr:hover {
+  background-color: #a5c4f7;
+}
+.red{
+  color: red
+}
+
+.typewriter{
+
+  display: inline-flex;
+  font-weight: bold;
+  color: #fff;
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  animation:
+    typing 2s steps(30,end),
+    blink-caret .5s step-end infinite;
+}
+
+#container {
+  display: flex;
+}
+
+#center {
+  margin: auto;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
+
+.up{
+    display: block;
+    margin: auto;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0,0,0,0.24);
+    width:80%;
+    border: 2px dashed;
+    background-color:white;
+    cursor: pointer;
+}
+
+/*radio buttons*/
+
+.radiocon {
+  align: center;
+  /*display: inline ;*/
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.radiocon input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  border-style:inset;
+  background-color: white;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.radiocon:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.radiocon input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radiocon input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radiocon .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+  opacity: 1;
+  transition: opacity 0.6s;
+  margin-bottom: 15px;
+}
+.alert.info {background-color: #2196F3;}
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
