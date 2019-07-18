@@ -2,7 +2,7 @@
 
 Ran Uzan
 
-I am a 4th year software engineering student at SCE currently living in Be’er sheva(israel).
+I am an SCE software engineering gradute currently living in Be’er sheva(israel).
 I am a quick learner with excellent communication skills, hardworking, dedicated, team worker as well as solo worker.
 
 Professional Expertise:
